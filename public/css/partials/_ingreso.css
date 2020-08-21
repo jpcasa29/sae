@@ -8,8 +8,8 @@ div.conImagen {
     flex-direction: column;
     align-items: center;
     
-    padding-top: 15px;
-    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 15px;
   }
   div img {
     width: 40%;
@@ -55,7 +55,7 @@ div.conImagen {
   }
 
   div form button {
-    margin: 15px 30px;
+    margin: 10px 30px;
     padding: 10px 10px;
     font-family: var(--font-monts);
     font-size: 20px;

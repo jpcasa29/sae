@@ -5,7 +5,7 @@ const bcrypt = require('bcrypt');
 const usuariosFilePath = path.join(__dirname, '../data/usuarios.json');
 const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, {encoding: 'utf-8'}));
 
-let pass = "admin1234";
+let pass = "123456";
 let passHash = bcrypt.hashSync(pass, 10);
 
 for(let i=0;i<usuarios.length;i++){

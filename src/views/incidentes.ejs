@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Cook - Home'}) %>
+<body>
+	<!-- Header -->
+	<%- include('partials/header') %>
+	<!-- /Header -->
+	
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-3">
+	<!-- Barra -->
+	<%- include('partials/barra') %>
+	<!-- /Barra -->
+			</div>
+
+			<div class="col-9">
+				
+				<div class="grid">
+					<p class="titulo" >Legajo</p>
+					<p class="titulo" >Apellido y Nombre</p>
+					<p class="titulo" >CUIL</p>
+					<p class="titulo" >Empresa</p>
+					<p class="titulo" >Posición</p>
+					<p class="titulo" >Ubicación</p>
+					<!-- /Lista -->
+					<% for(let i=0; i<incidentes.length; i++) { %>
+					
+					<a href="/incidentes/<%= incidentes[i].Legajo %>"><p><%= incidentes[i].Legajo %></p></a>
+					<a href=""><p><%= incidentes[i].Apellido_Nombre %></p></a>
+					<a href=""><p><%= incidentes[i].CUIL %></p></a>
+					<a href=""><p><%= incidentes[i].Empresa %></p></a>
+					<a href=""><p><%= incidentes[i].Posicion %></p></a>
+					<a href=""><p><%= incidentes[i].Ubicacion %></p></a>
+					<% } %>
+					
+				</div>
+
+
+			</div>
+
+		</div>
+	</div>
+	<!-- footer -->
+	<%- include('partials/footer') %>
+	<!-- /footer -->
+</body>	
+</html>
