@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Cook - Home'}) %>
+<body>
+	<!-- Header -->
+	<%- include('partials/header') %>
+	<!-- /Header -->
+	
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-3">
+	<!-- Barra -->
+	<%- include('partials/barra') %>
+	<!-- /Barra -->
+			</div>
+
+			<div class="col-9">
+				<div class="headerLiq">
+					<p class="titPay">Detalle de Liquidación <%= resultLiqSeleccionada[0].nroLiq %> - Legajo <%= resultLiqSeleccionada[0].legajo %> </p>
+
+					<ul>
+						
+						<a href="/payroll/nroliquidacion/liquidar/<%= resultLiqSeleccionada[0].nroLiq %>"><li>Volver a Detalle</li></a>
+					</ul>
+				</div>
+				
+				<div>
+			
+					<table class="liquidacion">
+							<tr class="tituloLiq">
+								<th>Cod.Conc.</th>
+								<th class="descLiq">Desc. Concepto</th>
+								<th>Periodo</th>
+								<th>Cantidad</th>
+								<th>Valor Base</th>
+								<th>Porcentaje</th>
+								<th>Haber  Remu</th>
+								<th>Hab.No Remu</th>
+								<th>Descuentos </th>
+							</tr>
+							
+							<% for(let i=0; i < resultLiqSeleccionada.length; i++) { %>
+							
+								<% if(resultLiqSeleccionada[i].tipo != 'Informativos1') { %>
+									<% if(resultLiqSeleccionada[i].tipo != 'Informativos2') { %>
+										<% if(resultLiqSeleccionada[i].tipo != 'Informativos3') { %>
+							<tr>
+								<td><%= resultLiqSeleccionada[i].codConcepto %></td>
+
+									<% for(let a=0; a < codConcepto.length; a++) { %>
+										<% if(codConcepto[a].codConcepto == resultLiqSeleccionada[i].codConcepto) { %>
+								<td class="descLiq"><%= codConcepto[a].descConcepto %></td>
+										<% } %>
+									<% } %>
+
+								<td><%= resultLiqSeleccionada[i].periodo %></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<% if(resultLiqSeleccionada[i].tipo == 'HaberRemu') { %>
+									<td><%= resultLiqSeleccionada[i].importeFinal %></td>
+								<% } else { %>
+									<td>0</td>
+								<% } %>
+								<% if(resultLiqSeleccionada[i].tipo == 'HaberNoRemu') { %>
+									<td><%= resultLiqSeleccionada[i].importeFinal %></td>
+								<% } else { %>
+									<td>0</td>
+								<% } %>
+								<% if(resultLiqSeleccionada[i].tipo == 'DescLegal') { %>
+									<td><%= resultLiqSeleccionada[i].importeFinal %></td>
+								<% } else { %>
+									<td>0</td>
+								<% } %>
+							</tr>
+										<% } %>
+									<% } %>
+								<% } %>
+							<% } %>
+							<tfoot>
+							<tr>
+								<td>x</td>
+								<td class="descLiq">Subtotales</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<% for(let i=0; i < resultLiqSeleccionada.length; i++) { %>
+									<% if(resultLiqSeleccionada[i].codConcepto == 'IN-5000') { %>
+								<td><%= resultLiqSeleccionada[i].importeFinal %></td>
+									<% } %>
+								<% } %>
+								<% for(let i=0; i < resultLiqSeleccionada.length; i++) { %>
+									<% if(resultLiqSeleccionada[i].codConcepto == 'IN-5001') { %>
+								<td><%= resultLiqSeleccionada[i].importeFinal %></td>
+									<% } %>
+								<% } %>
+								<% for(let i=0; i < resultLiqSeleccionada.length; i++) { %>
+									<% if(resultLiqSeleccionada[i].codConcepto == 'IN-5002') { %>
+								<td><%= resultLiqSeleccionada[i].importeFinal %></td>
+									<% } %>
+								<% } %>
+							</tr>
+						
+							<tr>
+								<td>x</td>
+								<td class="descLiq">Neto de Acreditación</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<% for(let i=0; i < resultLiqSeleccionada.length; i++) { %>
+									<% if(resultLiqSeleccionada[i].codConcepto == 'IN-5100') { %>
+								<td><%= resultLiqSeleccionada[i].importeFinal %></td>
+									<% } %>
+								<% } %>
+							</tr>
+						</tfoot>
+							
+						</table>
+			
+					</div>
+			 
+			</div>
+                
+			</div>
+
+		</div>
+	</div>
+	<!-- footer -->
+	<%- include('partials/footer') %>
+	<!-- /footer -->
+</body>	
+</html>
+
+

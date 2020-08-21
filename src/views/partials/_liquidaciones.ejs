@@ -1,0 +1,63 @@
+<div class="datosPay">
+    <nav>
+        <div class="nav nav-pills" id="nav-tab" role="tablist">
+          <a class="nav-item nav-link active" id="nav-Enero-tab" data-toggle="tab" href="#nav-Enero" role="tab" aria-controls="nav-Enero" aria-selected="true">Enero</a>
+          <a class="nav-item nav-link" id="nav-Febrero-tab" data-toggle="tab" href="#nav-Febrero" role="tab" aria-controls="nav-Febrero" aria-selected="false">Febrero</a>
+          <a class="nav-item nav-link" id="nav-Marzo-tab" data-toggle="tab" href="#nav-Marzo" role="tab" aria-controls="nav-Marzo" aria-selected="false">Marzo</a>
+          <a class="nav-item nav-link" id="nav-Abril-tab" data-toggle="tab" href="#nav-Abril" role="tab" aria-controls="nav-Abril" aria-selected="false">Abril</a>
+          <a class="nav-item nav-link" id="nav-Mayo-tab" data-toggle="tab" href="#nav-Mayo" role="tab" aria-controls="nav-Mayo" aria-selected="false">Mayo</a>
+          <a class="nav-item nav-link" id="nav-Junio-tab" data-toggle="tab" href="#nav-Junio" role="tab" aria-controls="nav-Junio" aria-selected="false">Junio</a>
+          <a class="nav-item nav-link" id="nav-Julio-tab" data-toggle="tab" href="#nav-Julio" role="tab" aria-controls="nav-Julio" aria-selected="false">Julio</a>
+          <a class="nav-item nav-link" id="nav-Agosto-tab" data-toggle="tab" href="#nav-Agosto" role="tab" aria-controls="nav-Agosto" aria-selected="false">Agosto</a>
+          <a class="nav-item nav-link" id="nav-Septiembre-tab" data-toggle="tab" href="#nav-Septiembre" role="tab" aria-controls="nav-Septiembre" aria-selected="false">Septiembre</a>
+          <a class="nav-item nav-link" id="nav-Octubre-tab" data-toggle="tab" href="#nav-Octubre" role="tab" aria-controls="nav-Octubre" aria-selected="false">Octubre</a>
+          <a class="nav-item nav-link" id="nav-Noviembre-tab" data-toggle="tab" href="#nav-Noviembre" role="tab" aria-controls="nav-Noviembre" aria-selected="false">Noviembre</a>
+          <a class="nav-item nav-link" id="nav-Diciembre-tab" data-toggle="tab" href="#nav-Diciembre" role="tab" aria-controls="nav-Diciembre" aria-selected="false">Diciembre</a>
+        </div>
+      </nav>
+      <div class="tab-content" id="nav-tabContent">
+          <% for (let i=0; i < meses.length; i++) { %>
+        <div class="tab-pane fade show" id="nav-<%= meses[i].mes %>" role="tabpanel" aria-labelledby="nav-<%= meses[i].mes %>-tab">
+
+            <% let liqSeleccionadas = liquidaciones.filter(function(elemento){ %>
+            <% return elemento.nro_mes == meses[i].id %>
+            <% }) %>
+            <% let mesSeleccionado = meses[i].mes %>
+
+            <table class="liquidaciones">
+                <tr class="titulo">
+                    <th>ID LIQ</th>
+                    <th>MES</th>
+                    <th>TIPO LIQ</th>
+                    <th class="desc">DESCRIPCION</th>
+                    <th>F.PAGO</th>
+                    <th>F.ACRE.</th>
+                    <th>Detalle</th>
+                </tr>
+                
+                <% for(let i=0; i < liqSeleccionadas.length; i++) { %>
+                
+                
+                <tr>
+                    <td><%= liqSeleccionadas[i].id %></td>
+                    <td><%= mesSeleccionado %></td>
+                    <td><%= liqSeleccionadas[i].tipo_liq %></td>
+                    <td class="desc"><%= liqSeleccionadas[i].desc_liq %></td>
+                    <td><%= liqSeleccionadas[i].f_pago %></td>
+                    <td><%= liqSeleccionadas[i].f_acreditacion %></td>
+                    <td><a href="nroliquidacion/<%= liqSeleccionadas[i].id %>">Ingresar</a></td>
+                </tr>
+                <% } %>
+                
+                
+            </table>
+
+        </div>
+        <% } %>
+        
+ <!-- muestra el nombre de usuario       
+        <div class="tab-pane fade" id="nav-febrero" role="tabpanel" aria-labelledby="nav-febero-tab">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos culpa veniam amet eligendi dignissimos tenetur doloribus iusto magni est a consequuntur voluptatem explicabo perspiciatis alias facere animi maiores blanditiis, ipsa magnam molestiae ducimus eos necessitatibus. Rerum, molestias? Distinctio ut architecto veniam eum porro aliquid libero, autem vitae soluta quasi beatae!</div>
+        <div class="tab-pane fade" id="nav-marzo" role="tabpanel" aria-labelledby="nav-marzo-tab">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus qui sint voluptatum excepturi. Ratione, eum perspiciatis nisi laborum quam doloremque.</div>
+      </div>
+-->
+</div>

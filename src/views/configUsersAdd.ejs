@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Cook - Home'}) %>
+<body>
+	<!-- Header -->
+	<%- include('partials/header') %>
+	<!-- /Header -->
+	
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-3">
+	<!-- Barra -->
+	<%- include('partials/barra') %>
+	<!-- /Barra -->
+			</div>
+
+			<div class="col-9">
+				<div class="headerLiq">
+					<p class="titCrearPay">Crear Usuario</p>
+
+				</div>
+				<div class="">
+					<form action="/config/users/add" method="POST">
+						<div class="form-group required">
+						<div class="formCrearLiq">
+						<label for="user">ID de Usuario</label>
+						<input type="text" name="user" id="user" placeholder="ID de Usuario" required="required">
+						</div>
+						<div class="formCrearLiq">
+						<label for="email">E-Mail</label>
+						<input type="email" name="email" id="email" placeholder="E-Mail del Usuario" required="required">
+                        </div>
+                        <div class="formCrearLiq">
+                            <label for="pass">Contraseña</label>
+                            <input type="password" name="pass" id="pass" placeholder="Defina contraseña inicial" required="required">
+                        </div>
+						<div class="formCrearLiq">
+						<label for="nombre">Nombre</label>
+						<input type="text" name="nombre" id="nombre" placeholder="Nombre del Usuario" required="required">
+						</div>
+						<div class="formCrearLiq">
+						<label for="apellido">Apellido</label>
+						<input type="text" name="apellido" id="apellido" placeholder="Apellido del Usuario" required="required">
+						</div>
+						<div class="formCrearLiq">
+						<label for="rol">Rol de Usuario</label>
+						<select class="" name="rol" id="rol" required="required">
+							<option value="Administrador">Administrador</option>
+							<option value="Gestor">Gestor</option>
+							<option value="Visualizador">Visualizador</option>
+						</select>
+						</div>
+						<div class="formCrearLiq">
+						<label for="legajo">Legajo</label>
+						<input type="text" name="legajo" id="legajo" required="required">
+						</div>
+												
+						<div class="botonCrear">	
+						<button class="crearLiq" type="submit">Crear</button>
+						</div>
+					</form>
+
+				</div>
+			</div>
+
+			
+
+
+		</div>
+
+	</div>
+	
+	<!-- footer -->
+	<%- include('partials/footer') %>
+	<!-- /footer -->
+</body>	
+</html>

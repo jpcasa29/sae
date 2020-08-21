@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Cook - Home'}) %>
+<body>
+	<!-- Header -->
+	<%- include('partials/header') %>
+	<!-- /Header -->
+	
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-3">
+	<!-- Barra -->
+	<%- include('partials/barra') %>
+	<!-- /Barra -->
+			</div>
+
+			<div class="col-9">
+				<br>
+				<h4 class="home">Configuraciones del Sistema</h4>
+				
+				<div class="cajas">
+                    <h5>Configuraciones - Usuario</h5>
+					<div class="ContenedorPayPrin">
+                        <a href="/config/users">Usuarios</a>
+						<a href="#">Seguridad por Roles</a>
+                    </div>
+                    <h5>Configuraciones - Payroll</h5> 
+                    <div class="ContenedorPayPrin">
+                        <a href="/config/conceptos">Conceptos</a>
+                        <a href="#">Algoritmos</a>
+                    </div>
+                    <div class="ContenedorPayPrin">    
+                        <a href="#">Parámetros</a>
+                        <a href="#">Periodos</a>
+					</div>
+				</div>
+				
+			</div>
+
+		</div>
+	</div>
+	<!-- footer -->
+	<%- include('partials/footer') %>
+	<!-- /footer -->
+</body>	
+</html>

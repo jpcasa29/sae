@@ -1,0 +1,45 @@
+div.nav a.nav-item {
+    font-size: 12px;
+    font-weight: bold;
+    background-color: white;
+    margin-right: 2px;
+}
+
+div.tab-content div table.liquidaciones {
+    background-color: rgba(211, 211, 211, 0.7);
+    margin-top: 10px;
+    margin-left: 10px;
+    border: 2px solid grey;
+    font-size: 11px;
+    
+}
+div.tab-content div table.liquidaciones tr.titulo {
+    background: lightslategrey;
+}
+div.tab-content div table.liquidaciones tr {
+    background: white;
+}
+div.tab-content div table.liquidaciones tr th {
+    width: 80px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+div.tab-content div table.liquidaciones tr th.desc {
+    width: 250px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+div.tab-content div table.liquidaciones tr td {
+    width: 80px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 2px solid grey;
+}
+div.tab-content div table.liquidaciones tr td.desc {
+    width: 250px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

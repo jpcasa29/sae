@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Cook - Home'}) %>
+<body>
+	<!-- Header -->
+	<%- include('partials/header') %>
+	<!-- /Header -->
+	
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-3">
+	<!-- Barra -->
+	<%- include('partials/barra') %>
+	<!-- /Barra -->
+			</div>
+
+			<div class="col-9">
+				<br>
+				<h4 class="home">Inicio</h4>
+				
+				<div class="cajas">
+					<span><i class="fas fa-bell"></i></span>
+					<h5>Notificaciones</h5>
+
+					<div class="miContenedor">
+						<a href="#">Lorem ipsum dolor sit amet.
+						</a>
+						<a href="#">Lorem ipsum dolor sit amet.</a>
+						<a href="#">Lorem ipsum dolor sit amet.</a>
+					</div>
+				</div>
+				<div class="cajas">
+					<span><i class="fas fa-bell"></i></span>
+					<h5>Aprobaciones Pendientes</h5>
+
+					<div class="miContenedor">
+						<a href="#">Lorem ipsum dolor sit amet.
+						</a>
+						<a href="#">Lorem ipsum dolor sit amet.</a>
+						<a href="#">Lorem ipsum dolor sit amet.</a>
+					</div>
+				</div>
+				<div class="cajas">
+					<span><i class="fas fa-bell"></i></span>
+					<h5>Liquidaciones Pendientes</h5>
+
+					<div class="miContenedor">
+						<a href="#">Lorem ipsum dolor sit amet.
+						</a>
+						<a href="#">Lorem ipsum dolor sit amet.</a>
+						<a href="#">Lorem ipsum dolor sit amet.</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- footer -->
+	<%- include('partials/footer') %>
+	<!-- /footer -->
+</body>	
+</html>

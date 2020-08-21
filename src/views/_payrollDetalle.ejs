@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Cook - Home'}) %>
+<body>
+	<!-- Header -->
+	<%- include('partials/header') %>
+	<!-- /Header -->
+	
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-3">
+	<!-- Barra -->
+	<%- include('partials/barra') %>
+	<!-- /Barra -->
+			</div>
+
+			<div class="col-9">
+				<div class="headerLiq">
+					<p class="titCrearPay">Detalle de Liquidacion N° <%= liquidaciones[0].id %> <%= liquidaciones[0].desc_liq %></p>
+
+                    <ul>
+                        <a id="editForm" href="#"><li>Modificar</li></a>
+                        <a href="edit/<%= liquidaciones[0].id %>/addEmple"><li>Agregar Empleados</li></a>
+                        <a href="liquidar/<%= liquidaciones[0].id %>"><li>Liquidar</li></a>
+                        <a href="#"><li>Desliquidar Todos</li></a>
+                        <a href="#"><li>Desliquidar Empleado</li></a>
+                        <a href="/payroll/process"><li>Volver a Liquidaciones</li></a>
+                        
+                    </ul>
+                    
+				</div>
+				<div class="">
+					
+					<form action="/payroll/nroliquidacion/edit/<%= liquidaciones[0].id %>" method="POST">
+						<fieldset disabled>
+						<div class="form-group required">
+						<div class="formCrearLiq">
+						<label for="id">ID</label>
+                        <input type="text" name="id" id="id" value="<%= liquidaciones[0].id %>">
+                        <label for="emple">Cant. Empleados</label>
+						<input type="text" name="emple" id="emple" disabled value="<%= liquidaciones[0].empleTot %>">
+                        </div>
+                        <div class="formCrearLiq">
+						<label for="mes">MES</label>
+						<select class="" name="mes" id="mes" required="required">
+                            
+                            <%- include('partials/_campoMesLiq', {title: 'Cook - Hola'}) %>
+
+						</select>
+						<label for="empleLiq">Empleados Liq.</label>
+						<input type="text" name="empleLiq" id="empleLiq" disabled value="<%= liquidaciones[0].empleLiq %>">
+						</div>
+						<div class="formCrearLiq">
+						<label for="anioLiq">AÑO</label>
+						<select class="" name="anioLiq" id="anioLiq" required="required">
+                            <% if(liquidaciones[0].anio == 2020) { %>
+                            <option value="2020" selected>2020</option>
+                            <% } %> 
+							<% if(liquidaciones[0].anio == 2021) { %>
+                            <option value="2021" selected>2021</option>
+                            <% } %> 
+							<% if(liquidaciones[0].anio == 2022) { %>
+                            <option value="2022" selected>2022</option>
+                            <% } %> 
+						</select>
+						<label for="empleNoLiq">Empleados NO Liq.</label>
+						<input type="text" name="empleNoLiq" id="empleNoLiq" disabled value="<%= liquidaciones[0].empleNoLiq %>">
+						</div>
+						<div class="formCrearLiq">
+						<label for="tipoLiq">Tipo Liquidación</label>
+						<select class="" name="tipoLiq" id="tipoLiq" required="required">
+                            <% if(liquidaciones[0].tipo_liq == "MENS") { %>
+                            <option value="MENS" selected>MENS</option>
+                            <% } %>
+                            <% if(liquidaciones[0].tipo_liq == "AVAC") { %>
+                            <option value="AVAC">AVAC</option>
+                            <% } %>
+                            <% if(liquidaciones[0].tipo_liq == "LFIN") { %>
+                            <option value="LFIN">LFIN</option>
+                            <% } %>
+						</select>
+						</div>
+						<div class="formCrearLiq">
+						<label for="f_pago">Fecha de Pago</label>
+						<input type="date" name="f_pago" id="f_pago" required="required" value="<%= liquidaciones[0].f_pago %>">
+						</div>
+						<div class="formCrearLiq">
+						<label for="f_acreditacion">Fecha de Acreditación</label>
+						<input type="date" name="f_acreditacion" id="f_acreditacion" required="required" value="<%= liquidaciones[0].f_acreditacion %>">
+						</div>
+						<div class="formCrearLiq">
+							<label for="descLiq">Descripción de Liquidación</label>
+							<input type="text" class="inputDesc" id="descLiq" name="descLiq" value="<%= liquidaciones[0].desc_liq %>" required="required">
+							
+							</div>
+						</div>		
+						<button type="submit" class="botonLiq">Grabar modificaciones</button>
+					</fieldset>
+                    </form>
+                    
+
+				</div>
+			</div>
+
+			
+
+
+		</div>
+
+	</div>
+	
+	<!-- footer -->
+	<%- include('partials/footer') %>
+	<!-- /footer -->
+	<script src="/js/prueba.js"></script>
+</body>	
+</html>

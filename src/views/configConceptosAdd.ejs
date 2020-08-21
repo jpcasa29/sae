@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Cook - Home'}) %>
+<body>
+	<!-- Header -->
+	<%- include('partials/header') %>
+	<!-- /Header -->
+	
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-3">
+	<!-- Barra -->
+	<%- include('partials/barra') %>
+	<!-- /Barra -->
+			</div>
+
+			<div class="col-9">
+				<div class="headerLiq">
+					<p class="titCrearPay">Crear Concepto de Liquidación</p>
+
+				</div>
+				<div class="">
+					<form action="/config/conceptos/add" method="POST">
+						<div class="form-group required">
+						<div class="formCrearLiq">
+						<label for="codConcepto">Cod Concepto</label>
+						<input type="text" name="codConcepto" id="codConcepto" placeholder="Codigo Concepto" required="required">
+						</div>
+						<div class="formCrearLiq">
+						<label for="descConcepto">Nombre Concepto</label>
+						<input type="text" name="descConcepto" id="descConcepto" placeholder="Nombre de Concepto" required="required">
+                        </div>
+                        <div class="formCrearLiq">
+                            <label for="tipo">Tipo Concepto</label>
+                            <select class="" name="tipo" id="tipo" required="required">
+                                <option value="HaberRemu">HaberRemu</option>
+                                <option value="HaberNoRemu">HaberNoRemu</option>
+                                <option value="DescLegal">DescLegal</option>
+                                <option value="Contribuciones">Contribuciones</option>
+                                <option value="Provisiones">Provisiones</option>
+                                <option value="Informativos">Informativos</option>
+                            </select>
+                            </div>
+                        <div class="formCrearLiq">
+                            <label for="modo">Modo de Liq</label>
+                            <select class="" name="modo" id="modo" required="required">
+                                <option value="auto">Automático</option>
+                                <option value="manual">Manual</option>
+                            </select>
+                        </div>
+                        <div class="formCrearLiq">
+                            <label for="codAlgoritmo">Cod.Algoritmo</label>
+                            <input type="text" name="codAlgoritmo" id="codAlgoritmo" placeholder="Defina Algoritmo" required="required">
+                        </div>
+						
+												
+						<div class="botonCrear">	
+						<button class="crearLiq" type="submit">Crear</button>
+						</div>
+					</form>
+
+				</div>
+			</div>
+
+			
+
+
+		</div>
+
+	</div>
+	
+	<!-- footer -->
+	<%- include('partials/footer') %>
+	<!-- /footer -->
+</body>	
+</html>

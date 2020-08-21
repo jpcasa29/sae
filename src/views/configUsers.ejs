@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Cook - Home'}) %>
+<body>
+	<!-- Header -->
+	<%- include('partials/header') %>
+	<!-- /Header -->
+	
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-3">
+	<!-- Barra -->
+	<%- include('partials/barra') %>
+	<!-- /Barra -->
+			</div>
+
+			<div class="col-9">
+                <div class="headerLiq">
+					<p class="titPay">Configuración de Usuarios</p>
+
+					<ul>
+						<a href="/config/users/add"><li>Agregar Usuario</li></a>
+						
+					</ul>
+				</div>
+				<div class="grid">
+					<p class="titulo" >Usuario</p>
+					<p class="titulo" >E-Mail</p>
+					<p class="titulo" >Nombre</p>
+					<p class="titulo" >Apellido</p>
+					<p class="titulo" >Rol</p>
+					<p class="titulo" >Legajo</p>
+					<!-- /Lista -->
+					<% for(let i=0; i<usuarios.length; i++) { %>
+					
+					<a href=""><p><%= usuarios[i].user %></p></a>
+					<a href=""><p><%= usuarios[i].email %></p></a>
+					<a href=""><p><%= usuarios[i].nombre %></p></a>
+					<a href=""><p><%= usuarios[i].apellido %></p></a>
+					<a href=""><p><%= usuarios[i].rol %></p></a>
+					<a href=""><p><%= usuarios[i].legajo %></p></a>
+					<% } %>
+					
+				</div>
+
+
+			</div>
+
+		</div>
+	</div>
+	<!-- footer -->
+	<%- include('partials/footer') %>
+	<!-- /footer -->
+</body>	
+</html>

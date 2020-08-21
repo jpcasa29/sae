@@ -1,0 +1,63 @@
+p.titCrearPay {
+    font-weight: bold;
+    font-size: 20px;
+    width: 100%;
+    border-bottom: 3px solid grey;
+    font-family: var(--font-monts);
+    
+}
+
+div.formCrearLiq {
+    display: flex;
+    font-family: var(--font-monts);
+    
+}
+
+div.formCrearLiq label {
+    width: 200px;
+    text-align: center;
+    padding-top: 10px;
+    font-family: var(--font-monts);
+    font-size: 14px;
+    background-color: rgba(179, 177, 177, 0.486);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+div.formCrearLiq input {
+    width: 200px;
+    margin: 5px 5px;
+    height: 40px;
+    font-family: var(--font-monts);
+    
+}
+
+div.formCrearLiq input.inputDesc {
+    width: 600px;
+    margin: 5px 5px;
+    height: 40px;
+    font-family: var(--font-monts);
+}
+
+div.formCrearLiq select {
+    width: 200px;
+    height: 40px;
+    margin: 5px 5px;
+    font-family: var(--font-monts);
+    
+}
+
+form div.botonCrear {
+    display: flex;
+    justify-content: center;
+    
+}
+form div.botonCrear button.crearLiq {
+    width: 40%;
+    text-align: center;
+}
+
+.form-group.required label:after {
+    content:"*";
+    color:red;
+  }

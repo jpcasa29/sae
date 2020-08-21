@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Ingreso'}) %>
+<body>
+    <div class="conImagen">
+        <img src="./images/Icono-74.png" alt="">
+        
+    </div>
+    <div class="contenedor">
+        <form action="/" method="POST">
+            <h3>Ingrese con su cuenta</h3>
+            <input type="email" placeholder="Correo Electrónico" name="email">
+            <small><%= (typeof errores != "undefined" && errores.email) ? errores.email.msg : '' %></small>
+            <input type="password" name="pass" placeholder="Contraseña">
+            <small><%= (typeof errores != "undefined" && errores.pass) ? errores.pass.msg : '' %></small>
+            <small><%= (typeof errores2 != "undefined") ? errores2 : '' %></small>
+            <button type="submit">INGRESAR</button>
+            <div class="recordar">
+            <input type="checkbox" name='recordar'>
+            <label for="recordar">Recordar cuenta</label>
+            <a href="">Olvidé mi contraseña</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

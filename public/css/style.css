@@ -1,0 +1,44 @@
+/*====== Fonts ======*/
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+
+@import url(partials/_variables.css);
+
+/*====== Basics ======*/
+
+@import url(partials/_ingreso.css);
+@import url(partials/_header.css);
+@import url(partials/_barra.css);
+@import url(partials/home.css);
+@import url(partials/empleados.css);
+@import url(partials/idempleado.css);
+@import url(partials/payrollPrin.css);
+@import url(partials/payrollProcess.css);
+@import url(partials/payrollLiquidaciones.css);
+@import url(partials/payrollDetalle.css);
+@import url(partials/payrollCrear.css);
+@import url(partials/config.css);
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+  font-family: var(--font-monts);
+  background-color: var(--light-gray);
+  background-image: url(/images/fondoceleste.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+.container-fluid {
+  margin-left: 0;
+  padding-left: 0;
+  
+}
+

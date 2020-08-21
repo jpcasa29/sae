@@ -1,0 +1,26 @@
+div.datosEmp {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  div.col-9 p.titEmp {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  form section.datos {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+  }
+  
+  form section.datos label {
+    width: 15%;
+    padding-left: 10px;
+  }
+  form section.datos input {
+    width: 25%;
+    padding-left: 10px;
+  }
+  

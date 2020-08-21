@@ -1,0 +1,114 @@
+
+
+div.conImagen {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    
+    padding-top: 15px;
+    padding-bottom: 20px;
+  }
+  div img {
+    width: 40%;
+  }
+  
+  div.contenedor {
+    margin: 0 auto;
+    width: 75%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: rgb(0, 75, 122);
+    padding-top: 20px;
+    font-family: var(--font-monts);
+    border-radius: 5px;
+    box-shadow: 0px 2px 25px 12px rgba(0, 0, 0, 0.7);
+  }
+  
+  div form {
+    display: flex;
+    flex-direction: column;
+  }
+  div form h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: var(--font-monts);
+    font-size: 20px;
+    color: white;
+  }
+  
+  div form input {
+    display: inline-flexbox;
+    margin: 15px 30px;
+    padding: 10px 10px;
+    font-family: var(--font-monts);
+    
+  }
+
+  div form small {
+    margin-left: 10%;
+    color: white;
+  }
+
+  div form button {
+    margin: 15px 30px;
+    padding: 10px 10px;
+    font-family: var(--font-monts);
+    font-size: 20px;
+    background-color: var(--dark-blue);
+    color: whitesmoke;
+  }
+  div.recordar {
+    display: flexbox;
+  }
+  div.recordar input {
+    display: inline-flexbox;
+    font-family: var(--font-monts);
+    margin-right: 10px;
+  }
+  div.recordar label {
+    display: inline-flexbox;
+    font-family: var(--font-monts);
+    color: white;
+  }
+  div.recordar a {
+    margin-left: 10%;
+    margin-bottom: 5%;
+    display: block;
+    font-family: var(--font-monts);
+    color: white;
+  }
+  
+  @media (min-width: 500px) {
+    div.conImagen {
+      width: 55%;
+    }
+    div.contenedor {
+      width: 55%;
+    }
+  }
+
+  @media (min-width: 700px) {
+    div.conImagen {
+      width: 44%;
+    }
+    div.contenedor {
+      width: 44%;
+    }
+    div.recordar a {
+      
+      display: inline-block
+    }
+  }
+  @media (min-width: 1000px) {
+    div.conImagen {
+      width: 33%;
+    }
+    div.contenedor {
+      width: 33%;
+    }
+  }

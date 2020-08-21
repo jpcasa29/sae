@@ -1,0 +1,34 @@
+div.grid{
+    display: inline-grid;
+    grid-template-columns: 100px 300px 100px 200px repeat(2, 16%);
+    grid-template-rows: repeat(10, 50px);
+    
+    justify-items: stretch;
+    margin-top: 10px;
+    
+    }
+    
+    div.grid p.titulo { 
+      background: white ;
+      text-align: center;
+      color: blue;
+      padding: 5px;
+      border-bottom: grey solid 2px;
+      font-weight: bold;
+    }
+  div.grid a p { 
+    background: blue ;
+    text-align: center;
+    color: white;
+    padding: 5px;
+    text-decoration: none;
+    font-size: 12px;
+  }
+  div.grid a p:hover { 
+    background: rgb(1, 1, 185) ;
+    text-align: center;
+    color: white;
+    padding: 5px;
+    text-decoration: none;
+  }
+  

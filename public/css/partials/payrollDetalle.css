@@ -1,0 +1,44 @@
+div table.liquidacion {
+    background-color: rgba(211, 211, 211, 0.7);
+    margin-top: 10px;
+    margin-left: 10px;
+    border: 2px solid grey;
+    font-size: 11px;
+    
+}
+div table.liquidacion tr.tituloLiq {
+    background: lightslategrey;
+}
+div table.liquidacion tr {
+    background: white;
+}
+div table.liquidacion tr th {
+    width: 80px;
+    
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+div table.liquidacion tr th.descLiq {
+    width: 250px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+div table.liquidacion tr td {
+    width: 80px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 2px solid grey;
+}
+div table.liquidacion tr td.descLiq {
+    width: 250px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+div table.liquidacion tfoot tr td {
+    background-color: lightsteelblue;
+    font-weight: bold;
+}

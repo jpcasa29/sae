@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Ingreso'}) %>
+<body>
+    <div class="conImagen">
+        <img src="./images/Icono-74.png" alt="">
+    </div>
+    <div class="contenedor">
+        <form action="/cambiopass/edit/<%= usuario.user %>?_method=put" method="POST">
+            <h3>Por favor cambie su contraseña inicial</h3>
+            <input type="email" placeholder="Correo Electrónico" name="email" value="<%= usuario.email %>">
+            <!-- <small><%= (typeof errores != "undefined" && errores.email) ? errores.email.msg : '' %></small> -->
+            <input type="password" name="pass1" placeholder="Nueva Contraseña">
+            <!-- <small><%= (typeof errores != "undefined" && errores.pass1) ? errores.pass1.msg : '' %></small> -->
+            <input type="password" name="pass2" placeholder="Repita Contraseña">
+            <!-- <small><%= (typeof errores != "undefined" && errores.pass2) ? errores.pass2.msg : '' %></small> -->
+            <button type="submit">Cambiar Pass</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

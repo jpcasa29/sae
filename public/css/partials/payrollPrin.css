@@ -1,0 +1,32 @@
+div.col-9 h4.home {
+  font-weight: bold;
+  background-color: rgba(128, 128, 128, 0.76);
+  padding-left: 10px;
+  color: white;
+}
+
+div.ContenedorPayPrin {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+    
+  }
+  div.ContenedorPayPrin a {
+    font-style: normal;
+    font-family: var(--font-monts);
+    background: var(--light-blue);
+    width: 40%;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px 5px;
+    text-decoration: none;
+  }
+  div.ContenedorPayPrin a:hover {
+    background: rgb(17, 77, 167);
+    font-weight: bold;
+  }
+  
+  
+  

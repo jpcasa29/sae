@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Cook - Home'}) %>
+<body>
+	<!-- Header -->
+	<%- include('partials/header') %>
+	<!-- /Header -->
+	
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-3">
+	<!-- Barra -->
+	<%- include('partials/barra') %>
+	<!-- /Barra -->
+			</div>
+
+			<div class="col-9">
+				<div class="headerLiq">
+					<p class="titPay">Procesos de Liquidación</p>
+
+					<ul>
+						<a href="#"><li>Años Ant</li></a>
+						<a href='2019'><li>2019</li></a>
+						<a href="2020"><li>2020</li></a>
+						<a href="2021"><li>2021</li></a>
+						<a href="crearLiq/new"><li>Crear Nueva Liq</li></a>
+					</ul>
+				</div>
+  <!-- Barra -->
+	<%- include('partials/_liquidaciones') %>
+	<!-- /Barra -->
+        
+                    
+				</div>
+				
+			</div>
+
+		</div>
+	</div>
+	<!-- footer -->
+	<%- include('partials/footer') %>
+	<!-- /footer -->
+</body>	
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Cook - Home'}) %>
+<body>
+	<!-- Header -->
+	<%- include('partials/header') %>
+	<!-- /Header -->
+	
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-3">
+	<!-- Barra -->
+	<%- include('partials/barra') %>
+	<!-- /Barra -->
+			</div>
+
+			<div class="col-9">
+				<div class="headerLiq">
+					<p class="titCrearPay">Maker de Liquidaciones</p>
+
+				</div>
+				<div class="">
+					<form action="/payroll/process" method="POST">
+						<div class="form-group required">
+						<div class="formCrearLiq">
+						<label for="id">ID</label>
+						<input type="text" name="id" id="id" value="<%= contador %>" disabled>
+						</div>
+						<div class="formCrearLiq">
+						<label for="mes">MES</label>
+						<select class="" name="mes" id="mes" required="required">
+							<option value="1">Enero</option>
+							<option value="2">Febrero</option>
+							<option value="3">Marzo</option>
+							<option value="4">Abril</option>
+							<option value="5">Mayo</option>
+							<option value="6">Junio</opton>
+							<option value="7">Julio</option>
+							<option value="8">Agosto</option>
+							<option value="9">Septiembre</option>
+							<option value="10">Octubre</option>
+							<option value="11">Noviembre</option>
+							<option value="12">Diciembre</option>
+						</select>
+						</div>
+						<div class="formCrearLiq">
+						<label for="anioLiq">AÑO</label>
+						<select class="" name="anioLiq" id="anioLiq" required="required">
+							<option value="2020">2020</option>
+							<option value="2021">2021</option>
+							<option value="2022">2022</option>
+						</select>
+						</div>
+						<div class="formCrearLiq">
+						<label for="tipoLiq">Tipo Liquidación</label>
+						<select class="" name="tipoLiq" id="tipoLiq" required="required">
+							<% for(let i=0; i < tipoLiq.length; i++) {%>
+							<option value="<%= tipoLiq[i].codLiq %>"><%= tipoLiq[i].codLiq %></option>
+							<% } %>
+						</select>
+						</div>
+						<div class="formCrearLiq">
+						<label for="f_pago">Fecha de Pago</label>
+						<input type="date" name="f_pago" id="f_pago" required="required">
+						</div>
+						<div class="formCrearLiq">
+						<label for="f_acreditacion">Fecha de Acreditación</label>
+						<input type="date" name="f_acreditacion" id="f_acreditacion" required="required">
+						</div>
+						<div class="formCrearLiq">
+							<label for="descLiq">Descripción de Liquidación</label>
+							<input type="text" class="inputDesc" id="descLiq" name="descLiq" placeholder="Descripción de Liquidación" required="required">
+							
+							</div>
+						</div>
+						<div class="botonCrear">	
+						<button class="crearLiq" type="submit">Crear</button>
+						</div>
+					</form>
+
+				</div>
+			</div>
+
+			
+
+
+		</div>
+
+	</div>
+	
+	<!-- footer -->
+	<%- include('partials/footer') %>
+	<!-- /footer -->
+</body>	
+</html>

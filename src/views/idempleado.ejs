@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Cook - Home'}) %>
+<body>
+	<!-- Header -->
+	<%- include('partials/header') %>
+	<!-- /Header -->
+	
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-3">
+	<!-- Barra -->
+	<%- include('partials/barra') %>
+	<!-- /Barra -->
+			</div>
+
+			<div class="col-9">
+
+                <p class="titEmp">Legajo <%= empleados[0].Legajo %> - <%= empleados[0].Apellido_Nombre %></p>
+
+                <div class="datosEmp">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Datos Personales</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Datos Laborales</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+                    </li>
+                  </ul>
+                  <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+                        <form action="">
+                            <section class="datos">
+                                
+                                <label for="nombre">Apellido y Nombre</label>
+                                <input type="text" value="<%= empleados[0].Apellido_Nombre %>">
+                                <label for="cuil">CUIL</label>
+                                <input type="text" value="<%= empleados[0].CUIL %>">
+                                <label for="empresa">Empresa</label>
+                                <input type="text" value="<%= empleados[0].Empresa %>">
+                                <label for="posicion">Posición</label>
+                                <input type="text" value="<%= empleados[0].Posicion %>">
+                            </section>
+                        </form>
+
+                    </div>
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+
+                    <form action="">
+                        <section class="datos">
+                            
+                            <label for="base">Base Horaria</label>
+                            <input type="text" value="<%= empleados[0].base_horaria %>">
+                            <label for="convenio">Convenio</label>
+                            <input type="text" value="<%= empleados[0].Convenio %>">
+                            <label for="ceco">Centro de Costo</label>
+                            <input type="text" value="<%= empleados[0].CC %>">
+                            <label for="basico">Sueldo Basico</label>
+                            <input type="number" value="<%= empleados[0].sueldo_basico %>">
+                        </section>
+                    </form>
+
+                    </div>
+                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+                  </div>
+				</div>
+				
+
+			</div>
+
+		</div>
+	</div>
+	<!-- footer -->
+	<%- include('partials/footer') %>
+	<!-- /footer -->
+</body>	
+</html>

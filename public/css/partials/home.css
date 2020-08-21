@@ -1,0 +1,46 @@
+div.col-9 h4.home {
+  font-weight: bold;
+  background-color: rgba(128, 128, 128, 0.76);
+  padding-left: 10px;
+  color: white;
+}
+
+div.cajas {
+    border: 2px solid gray;
+    border-radius: 5px;
+    padding: 10px 10px;
+    margin-top: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+  div.cajas span {
+    font-size: 20px;
+  }
+  
+  div.cajas h5{
+    display: inline-block;
+    margin-left: 10px;
+  }
+  div.miContenedor {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+    
+  }
+  div.miContenedor a {
+    font-style: normal;
+    font-family: var(--base-font-family);
+    background: var(--light-blue);
+    width: 25%;
+    color: white;
+    border-radius: 3px;
+    text-align: center;
+    padding: 20px 5px;
+    text-decoration: none;
+  }
+  div.miContenedor a:hover {
+    background: rgb(17, 77, 167);
+    font-weight: bold;
+  }
+  
+  

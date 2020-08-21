@@ -1,0 +1,82 @@
+div.col-9 div.headerLiq {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  
+}
+
+  div.col-9 div.headerLiq p.titPay {
+    font-weight: bold;
+    font-size: 20px;
+    display: inline;
+    font-family: var(--font-monts);
+  }
+
+  div.row div.col-9 div.headerLiq ul {
+    display: inline;
+}
+
+div.row div.col-9 div.headerLiq ul a {
+    
+}
+  div.row div.col-9 div.headerLiq ul a li {
+    display: inline;
+    padding: 10px;
+    margin-left: 10;
+    margin-right: 10px;
+    background: var(--light-blue);
+    border-radius: 4px;
+    text-align: center;
+    font-family: var(--font-monts);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+}
+div.row div.col-9 div.headerLiq ul a li:hover {
+  color: var(--dark-blue);
+  text-decoration: none;
+}
+
+  
+  div.datosPay {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  div.datosPay ul li a {
+      font-size: 14px;
+  }
+
+  form section.datos {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+  }
+  
+  form section.datos label {
+    width: 15%;
+    padding-left: 10px;
+  }
+  form section.datos input {
+    width: 25%;
+    padding-left: 10px;
+  }
+  
+  button.botonLiq {
+    width: 300px;
+    padding: 10px;
+    margin: 0 auto;
+    background: var(--light-blue);
+    border-radius: 4px;
+    margin-left: 30%;
+    text-align: center;
+    font-family: var(--font-monts);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+}
+button.botonLiq:hover {
+  color: var(--dark-blue);
+  text-decoration: none;
+}
