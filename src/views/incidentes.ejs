@@ -18,21 +18,21 @@
 			<div class="col-9">
 				
 				<div class="grid">
-					<p class="titulo" >Legajo</p>
-					<p class="titulo" >Apellido y Nombre</p>
-					<p class="titulo" >CUIL</p>
-					<p class="titulo" >Empresa</p>
-					<p class="titulo" >Posición</p>
-					<p class="titulo" >Ubicación</p>
+					<p class="titulo" >Número</p>
+					<p class="titulo" >Título</p>
+					<p class="titulo" >Tipo</p>
+					<p class="titulo" >Usuario</p>
+					<p class="titulo" >Creado</p>
+					<p class="titulo" >Status</p>
 					<!-- /Lista -->
 					<% for(let i=0; i<incidentes.length; i++) { %>
 					
-					<a href="/incidentes/<%= incidentes[i].Legajo %>"><p><%= incidentes[i].Legajo %></p></a>
-					<a href=""><p><%= incidentes[i].Apellido_Nombre %></p></a>
-					<a href=""><p><%= incidentes[i].CUIL %></p></a>
-					<a href=""><p><%= incidentes[i].Empresa %></p></a>
-					<a href=""><p><%= incidentes[i].Posicion %></p></a>
-					<a href=""><p><%= incidentes[i].Ubicacion %></p></a>
+					<a href="/incidentes/<%= incidentes[i].id %>"><p><%= incidentes[i].id %></p></a>
+					<a href=""><p><%= incidentes[i].name %></p></a>
+					<a href=""><p><%= incidentes[i].types.name %></p></a>
+					<a href=""><p><%= incidentes[i].user.email %></p></a>
+					<a href=""><p><%= incidentes[i].created_date %></p></a>
+					<a href=""><p><%= incidentes[i].status.name %></p></a>
 					<% } %>
 					
 				</div>

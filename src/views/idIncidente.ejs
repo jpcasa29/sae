@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+<%- include('partials/head', {title: 'Cook - Home'}) %>
+<body>
+	<!-- Header -->
+	<%- include('partials/header') %>
+	<!-- /Header -->
+	
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-3">
+	<!-- Barra -->
+	<%- include('partials/barra') %>
+	<!-- /Barra -->
+			</div>
+
+			<div class="col-9">
+
+                <p class="titEmp">Incidente N° <%= incidente.id %> - <%= incidente.name %></p>
+
+                <div class="datosEmp">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Datos Incidente</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Datos Resolución</a>
+                    </li>
+                    
+                  </ul>
+                  <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+                        <form action="">
+                            <section class="datos">
+                                
+                                <label for="name">Título</label>
+                                <input class="largo" name="name" type="text" value="<%= incidente.name %>">
+                                <label for="type">Tipo Incidente</label>
+                                <input type="text" name="type" value="<%= incidente.types.name %>">
+                                <label for="user_created">Usuario</label>
+                                <input type="text" name="user_created" value="<%= incidente.user.email %>">
+                                <label for="created_date">Fecha Creación</label>
+                                <input type="text" name="created_date" value="<%= incidente.created_date %>">
+                                <textarea name="description" id="" cols="115" rows="5"><%= incidente.description %> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quam praesentium dignissimos sed alias laboriosam eveniet eos fugit, tempora veritatis minima possimus voluptates eum quisquam obcaecati rerum facere consequuntur iste hic vitae. Quaerat, reiciendis. Laudantium deserunt corporis facilis illo ab.</textarea>
+                            </section>
+                        </form>
+
+                    </div>
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+
+                    <form action="">
+                        <section class="datos">
+                            
+                            <label for="deadline">Fecha Vencimiento</label>
+                            <input type="text" name="deadline" value="<%= incidente.deadline %>">
+                            <label for="convenio">Convenio</label>
+                            <input type="text" value="">
+                            <label for="user_close">Usuario Gestor</label>
+                            <input type="text" name="user_close" value="<%= incidente.userclose_id %>">
+                            <label for="closing_date">Fecha Cierre</label>
+                            <input type="text" name="closing_date" value="<%= incidente.closing_date %>">
+                            <textarea name="resolution" id="resolution" cols="115" rows="5"><%= incidente.resolution %> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quam praesentium dignissimos sed alias laboriosam eveniet eos fugit, tempora veritatis minima possimus voluptates eum quisquam obcaecati rerum facere consequuntur iste hic vitae. Quaerat, reiciendis. Laudantium deserunt corporis facilis illo ab.</textarea>
+                        </section>
+                    </form>
+
+                    </div>
+                    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+                  </div>
+				</div>
+				
+
+			</div>
+
+		</div>
+	</div>
+	<!-- footer -->
+	<%- include('partials/footer') %>
+	<!-- /footer -->
+</body>	
+</html>

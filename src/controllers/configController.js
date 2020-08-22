@@ -1,9 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 const bcrypt = require('bcrypt');
-let db = require("../../database/models");
+let db = require("../database/models");
 const { Op } = require("sequelize");
-const User = require("../../database/models/User");
+const User = require("../database/models/User");
 
 //const usuariosFilePath = path.join(__dirname, '../data/usuarios.json');
 //const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, {encoding: 'utf-8'}));

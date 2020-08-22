@@ -2,7 +2,7 @@
 
 div.conImagen {
     margin: 0 auto;
-    width: 80%;
+    width: 70%;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -12,7 +12,7 @@ div.conImagen {
     padding-bottom: 15px;
   }
   div img {
-    width: 40%;
+    width: 30%;
   }
   
   div.contenedor {
@@ -35,7 +35,7 @@ div.conImagen {
   }
   div form h3 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-family: var(--font-monts);
     font-size: 20px;
     color: white;
@@ -43,7 +43,7 @@ div.conImagen {
   
   div form input {
     display: inline-flexbox;
-    margin: 15px 30px;
+    margin: 10px 30px;
     padding: 10px 10px;
     font-family: var(--font-monts);
     
