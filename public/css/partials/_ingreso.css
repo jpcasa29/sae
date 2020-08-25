@@ -1,32 +1,25 @@
 
 
-div.conImagen {
+
+  form img {
+    width: 100%;
     margin: 0 auto;
-    width: 70%;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    align-items: center;
-    
-    padding-top: 10px;
-    padding-bottom: 15px;
-  }
-  div img {
-    width: 30%;
   }
   
   div.contenedor {
     margin: 0 auto;
+    margin-top: 40px;
     width: 75%;
     height: auto;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    background-color: rgb(0, 75, 122);
+    background-color: white;
     padding-top: 20px;
     font-family: var(--font-monts);
     border-radius: 5px;
-    box-shadow: 0px 2px 25px 12px rgba(0, 0, 0, 0.7);
+    border: 2px solid white;
+    box-shadow: 0px 2px 25px 12px rgba(0, 0, 0, 0.5);
   }
   
   div form {
@@ -46,24 +39,35 @@ div.conImagen {
     margin: 10px 30px;
     padding: 10px 10px;
     font-family: var(--font-monts);
-    
+    border: none;
+    border-bottom: 2px solid rgba(128, 128, 128, 0.575);
   }
 
   div form small {
     margin-left: 10%;
-    color: white;
+    color: red;
   }
 
   div form button {
-    margin: 10px 30px;
-    padding: 10px 10px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 5px 10px;
     font-family: var(--font-monts);
-    font-size: 20px;
-    background-color: var(--dark-blue);
-    color: whitesmoke;
+    font-size: 15px;
+    background-color: var(--light-gray);
+    color: var(--compensados1);
+    border-radius: 20px;
+    font-weight: bold;
   }
+  div form a {
+    width: 100%;
+    margin-left: 10%;
+    
+  }
+  
   div.recordar {
     display: flexbox;
+    justify-content: space-between;
   }
   div.recordar input {
     display: inline-flexbox;
@@ -73,29 +77,29 @@ div.conImagen {
   div.recordar label {
     display: inline-flexbox;
     font-family: var(--font-monts);
-    color: white;
+    color: grey;
+    font-size: 12px;
   }
-  div.recordar a {
+  div.recordar a.olvido {
     margin-left: 10%;
     margin-bottom: 5%;
-    display: block;
+    display: inline-block;
     font-family: var(--font-monts);
-    color: white;
+    color: grey;
+    font-size: 12px;
+    width: auto;
+    
   }
   
   @media (min-width: 500px) {
-    div.conImagen {
-      width: 55%;
-    }
+   
     div.contenedor {
       width: 55%;
     }
   }
 
   @media (min-width: 700px) {
-    div.conImagen {
-      width: 44%;
-    }
+    
     div.contenedor {
       width: 44%;
     }
@@ -105,10 +109,9 @@ div.conImagen {
     }
   }
   @media (min-width: 1000px) {
-    div.conImagen {
-      width: 33%;
-    }
+    
     div.contenedor {
       width: 33%;
+      padding-top: 0px;
     }
   }

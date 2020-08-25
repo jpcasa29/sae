@@ -5,3 +5,17 @@
     padding: 10px;
     background-color: teal;
 }
+
+.configUser {
+    width: 25%;
+    height: 40px;
+    margin-left: 0px;
+    margin-right: 20px;
+    font-size: 12px;
+}
+.botonConfigUser {
+    width: 30%;
+   
+    margin: 2% 35%;
+    border: none;
+}

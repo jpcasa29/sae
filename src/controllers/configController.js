@@ -86,7 +86,8 @@ const controller = {
             type_id:req.body.rol,
             birth_date: req.body.birth_date,
             cambiopass: 0,
-            status: 1
+            status: 1,
+            block: 0
           })
           .then(function(result){
 
@@ -100,6 +101,38 @@ const controller = {
 		
         res.redirect('/config/users')
     })
+    },
+    detail: function(req, res) {
+        db.User.findByPk(req.params.id, {
+            include: [
+              {association: "types"}
+              ],
+          })
+            .then(function(result){
+                let usuario
+                    if(req.session.usuario) {
+                    usuario = req.session.usuario;
+                    } else {
+                    usuario = 'Juan'
+                    }
+                res.render('configUserDetail', {
+                    usuarios: result,
+                    usuario: usuario
+                })
+            })
+    },
+    detailSave: function(req, res) {
+        db.User.update({
+            block: req.body.block
+          },
+          { where: {
+            email: req.body.email
+          }
+          })
+            .then(function(result){
+                
+                res.redirect('/config/users')
+            })
     }
 	
 };

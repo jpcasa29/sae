@@ -34,7 +34,7 @@
 					<!-- /Lista -->
 					<% for(let i=0; i<usuarios.length; i++) { %>
 					
-					<a href=""><p><%= usuarios[i].username %></p></a>
+					<a href="/config/users/<%= usuarios[i].email %>"><p><%= usuarios[i].username %></p></a>
 					<a href=""><p><%= usuarios[i].email %></p></a>
 					<a href=""><p><%= usuarios[i].first_name %></p></a>
 					<a href=""><p><%= usuarios[i].last_name %></p></a>

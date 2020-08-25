@@ -3,20 +3,20 @@
 <!-- Include Head -->
 <%- include('partials/head', {title: 'Ingreso'}) %>
 <body>
-    <div class="conImagen">
-        <img src="./images/Icono-74.png" alt="">
-    </div>
+    
     <div class="contenedor">
         <form action="/registro" method="POST">
+            <img src="./images/rrhh.jpg" alt="">
             <h3>Registro de Usuarios</h3>
-            <input type="email" placeholder="Correo Electrónico" name="email">
-            <input type="password" name="pass" placeholder="Contraseña">
-            <input type="text" placeholder="Nombre" name="name">
-            <input type="text" placeholder="Apellido" name="apellido">
-            <input type="text" placeholder="Tipo de usuario" name="user">
-            <button type="submit">Ingresar</button>
+            <input type="email" placeholder="Correo Electrónico" name="email" value="<%= (typeof email != 'undefined') ? email : '' %>">
+            <input type="password" name="pass1" placeholder="Nueva Contraseña">
+            <input type="password" name="pass2" placeholder="Repita Contraseña">
+            <input type="text" placeholder="Nombre" name="first_name">
+            <input type="text" placeholder="Apellido" name="last_name">
+            <input type="date" name="birth_date"><br>
+            <button type="submit">Registrarme  <i class="fas fa-user-plus"></i></button>
             <br>
-            <h5 id="retorno">hola</h5>
+            
         </form>
     </div>
 </body>

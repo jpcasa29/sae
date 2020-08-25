@@ -37,6 +37,10 @@ module.exports = function(sequelize, dataTypes) {
         cambiopass: {
             type: dataTypes.INTEGER(11),
             allowNull: false
+        },
+        block: {
+            type: dataTypes.INTEGER(11),
+            allowNull: false
         }
         
     }

@@ -21,17 +21,31 @@ div form.form-header {
 
 
 }
-header div div div form.form-header input {
-    
-    width: 70%;
-    margin-right: 0;
+header div div div form.form-header div {
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+    background-color: white;
+    border-radius: 20px;
+}
 
+header div div div form.form-header div input {
+    border-radius: 10px;
+    width: 80%;
+    margin-right: 0;
+    border: none;
 
 }
-header div div div form.form-header button {
-    display: flex;
-    margin-left: 0;
-    
+header div div div form.form-header div button.botonBusqueda {
+    display: inline;
+    margin: 0;
+    width: auto;
+    height: 80%;    
+    margin-top: 6px;
+    border: none;
+    background-color: white;
+    font-size: 25px;
+    color: var(--light-blue)
 }
 
 header div div div div.datoUser {

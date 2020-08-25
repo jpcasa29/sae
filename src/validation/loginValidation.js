@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const {check, validationResult, body} = require('express-validator');
-
+let db = require("../database/models");
 //let usuarios = fs.readFileSync(path.join(__dirname, '../data/usuarios.json'), 'utf8');
 //usuarios = JSON.parse(usuarios);
 

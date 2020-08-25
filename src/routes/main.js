@@ -21,11 +21,15 @@ const editPassValidation = require(path.join(__dirname, '../validation/editPassV
 
 router.get('/', userController.ingreso); /* GET - home page */
 router.post('/', loginValidation, userController.login); /* GET -  */
+router.get('/registro', loginValidation, userController.register)
+router.post('/registro', loginValidation, userController.registerSave)
 router.put('/cambiopass/edit/:user', userController.editPass); /* GET - home page */
 router.get('/exit', mainController.exit); /* GET - home */
 
 router.get('/config', authMiddleware, configController.index); /* GET -  */
 router.get('/config/users', authMiddleware, configController.users); /* GET -  */
+router.get('/config/users/:id', authMiddleware, configController.detail); /* GET -  */
+router.post('/config/users/:id', authMiddleware, configController.detailSave); /* GET -  */
 router.get('/config/users/add', authMiddleware, configController.add); /* GET -  */
 router.post('/config/users/add', authMiddleware, configController.addSave); /* GET -  */
 
