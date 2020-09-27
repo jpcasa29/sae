@@ -9,6 +9,7 @@
             <img src="./images/rrhh.jpg" alt="">
             <h3>Registro de Usuarios</h3>
             <input type="email" placeholder="Correo Electrónico" name="email" value="<%= (typeof email != 'undefined') ? email : '' %>">
+            <small><%= (typeof errores != "undefined" && errores.email) ? errores.email.msg : '' %></small>
             <input type="password" name="pass1" placeholder="Nueva Contraseña">
             <input type="password" name="pass2" placeholder="Repita Contraseña">
             <input type="text" placeholder="Nombre" name="first_name">

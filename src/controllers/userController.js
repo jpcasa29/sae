@@ -5,7 +5,6 @@ const cookie = require('cookie-parser')
 const {check, validationResult, body} = require('express-validator')
 let db = require("../database/models");
 const { Op } = require("sequelize");
-const User = require("../database/models/User");
 
 //const usuariosFilePath = path.join(__dirname, '../data/usuarios.json');
 //const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, {encoding: 'utf-8'}));
@@ -25,9 +24,9 @@ const controller = {
 			let email = req.session.email
 
 			db.User.findByPk(req.body.email, {
-				include: [
-				  {association: "types"}
-				  ],
+				include: {
+					all: true
+				}
 			  })
 				.then(function(result){
 			
@@ -144,6 +143,10 @@ const controller = {
     
 	},
 	registerSave: function(req, res) {
+
+		let errores = validationResult(req)
+		if(errores.isEmpty()){
+
 		let email = req.body.email
 		let username = email.slice(0, email.indexOf('@'))
 
@@ -161,8 +164,13 @@ const controller = {
           })
           .then(function(result){
 
-        res.redirect('/')
-    })
+        		res.redirect('/')
+			})
+		} else {
+			res.render('registroUser', {
+				errores: errores.mapped()
+			})
+		}
     
 	}
 	

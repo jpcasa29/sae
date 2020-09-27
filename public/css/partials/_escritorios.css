@@ -1,0 +1,17 @@
+.columnas {
+    text-align: center;
+}
+.filas {
+    text-align: center;
+}
+td img {
+    height: 40px;
+    width: 40px;
+    border-radius: 10px;
+}
+
+.hola {
+    font-family: fira-sans,sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}

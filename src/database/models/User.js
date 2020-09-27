@@ -60,6 +60,13 @@ module.exports = function(sequelize, dataTypes) {
         User.hasMany(models.Incident, {
             as: "incident",
             foreignKey: "user_id"
+        }),
+        User.belongsToMany(models.Area, {
+            as: "areas",
+            through: "access",
+            foreignKey: "user_id",
+            otherKey: "area_id",
+            timestamps: false
         })
     }
     

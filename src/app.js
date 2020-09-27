@@ -26,9 +26,13 @@ app.set('views', path.join(__dirname, '/views')); // Define la ubicación de la 
 // ************ WRITE YOUR CODE FROM HERE ************
 // ************ Route System require and use() ************
 const mainRouter = require('./routes/main'); // Rutas main
+const configRouter = require('./routes/config'); // Rutas config
+const tulugarRouter = require('./routes/tulugar'); // Rutas tulugar
 
 
 app.use('/', mainRouter);
+app.use('/config', configRouter);
+app.use('/tulugar', tulugarRouter);
 
 
 app.listen(3000, function() {

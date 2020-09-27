@@ -8,7 +8,7 @@
   
   div.contenedor {
     margin: 0 auto;
-    margin-top: 40px;
+    margin-top: 30px;
     width: 75%;
     height: auto;
     display: flex;
@@ -111,7 +111,7 @@
   @media (min-width: 1000px) {
     
     div.contenedor {
-      width: 33%;
+      width: 30%;
       padding-top: 0px;
     }
   }
